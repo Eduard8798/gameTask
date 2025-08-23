@@ -1,0 +1,125 @@
+
+.container {
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.createButton {
+    background-color: #040303;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.createButton:hover {
+    background-color: #2563eb;
+}
+
+.heroGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.heroCard {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heroCard img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.heroCard h2 {
+    margin: 12px 0 8px 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.button {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.infoButton {
+    background-color: #030303;
+    color: white;
+}
+
+.infoButton:hover {
+    background-color: #2563eb;
+}
+
+.editButton {
+    background-color: #030303;
+    color: white;
+}
+
+.editButton:hover {
+    background-color: #059669;
+}
+
+.deleteButton {
+    background-color: #040303;
+    color: white;
+}
+
+.deleteButton:hover {
+    background-color: #b91c1c;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.pageButton {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.pageButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pageNumber {
+    font-weight: bold;
+}

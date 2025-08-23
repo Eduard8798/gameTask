@@ -1,0 +1,84 @@
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #1e1e2f;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #aaa;
+}
+
+input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #2b2b3d;
+    color: #fff;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.superpowers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.superpower {
+    background: #444;
+    padding: 5px 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.superpower button {
+    background: transparent;
+    border: none;
+    color: #ff6b6b;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.addButton, .submitButton, .backButton {
+    background: #555454;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.addButton:hover, .submitButton:hover {
+    background: #3a9cd9;
+}

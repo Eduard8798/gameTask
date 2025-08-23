@@ -1,0 +1,80 @@
+.container {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formGroup {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    margin-top: 5px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+.superpowers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.superpower {
+    background-color: #444;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.addButton, .updateButton ,.backButton {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #555454;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addButton:hover, .updateButton:hover {
+    background-color: #0050cc;
+}
+
+.imageContainer {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    max-height: 400px;
+}
+
+.heroImage {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.loading {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 50px;
+}
