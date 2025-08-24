@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import styles from "./HeroCreate.module.css";
+import {API_URL} from "../../helper/myUrl.jsx";
 
 const HeroCreate = () => {
     const navigate = useNavigate();
@@ -56,7 +57,7 @@ const HeroCreate = () => {
                 formData.append("images", img);
             }
 
-            await axios.post("https://gametask-production.up.railway.app/api/heroes", formData, {
+            await axios.post(`${API_URL}/api/heroes`, formData, {
                 headers: { "Content-Type": "multipart/form-data" },
             });
 

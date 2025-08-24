@@ -2,6 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./HeroInfo.module.css";
+import {API_URL} from "../../helper/myUrl.jsx";
 
 const HeroInfo = () => {
     const { id } = useParams();
@@ -12,7 +13,7 @@ const HeroInfo = () => {
     useEffect(() => {
         const fetchHero = async () => {
             try {
-                const res = await axios.get(`https://gametask-production.up.railway.app/api/heroes/${id}`);
+                const res = await axios.get(`${API_URL}/api/heroes/${id}`);
                 setHero(res.data);
             } catch (error) {
                 console.log(error);

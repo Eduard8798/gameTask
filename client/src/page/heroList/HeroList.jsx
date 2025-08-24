@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import styles from './HeroList.module.css';
 import { useNavigate } from 'react-router-dom';
+import {API_URL} from "../../helper/myUrl.jsx";
 
 
 const HeroList = () => {
@@ -12,8 +13,7 @@ const HeroList = () => {
 
     async function getHero() {
         try {
-            const response = await axios.get(`https://gametask-production.up.railway.app/api/heroes?page=${page}&limit=5`)
-
+            const response = await axios.get(`${API_URL}/api/heroes?page=${page}&limit=5`)
             setData(response.data);
         } catch (error) {
             console.log('error load hero', error.response || error.message)
@@ -22,7 +22,7 @@ const HeroList = () => {
 
     async function deleteHero(id) {
         try {
-            const res = await axios.delete(`https://gametask-production.up.railway.app/api/heroes/${id}`, {
+            const res = await axios.delete(`${API_URL}/api/heroes/${id}`, {
                 method: 'delete'
             })
         } catch (e) {

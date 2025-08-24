@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import styles from "./HeroEdit.module.css";
+import {API_URL} from "../../helper/myUrl.jsx";
 
 const HeroEdit = () => {
     const { id } = useParams();
@@ -25,7 +26,7 @@ const HeroEdit = () => {
     useEffect(() => {
         const fetchHero = async () => {
             try {
-                const res = await axios.get(`https://gametask-production.up.railway.app/api/heroes/${id}`);
+                const res = await axios.get(`${API_URL}/api/heroes/${id}`);
                 setHero(res.data);
                 setLoading(false);
             } catch (error) {
