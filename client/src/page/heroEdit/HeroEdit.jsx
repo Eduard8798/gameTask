@@ -25,7 +25,7 @@ const HeroEdit = () => {
     useEffect(() => {
         const fetchHero = async () => {
             try {
-                const res = await axios.get(`http://localhost:5007/api/heroes/${id}`);
+                const res = await axios.get(`https://gametask-production.up.railway.app/api/heroes/${id}`);
                 setHero(res.data);
                 setLoading(false);
             } catch (error) {
@@ -73,7 +73,7 @@ const HeroEdit = () => {
             newImages.forEach(file => formData.append("file", file));
 
 
-            await axios.put("http://localhost:5007/api/heroes", formData, {
+            await axios.put("https://gametask-production.up.railway.app/api/heroes", formData, {
                 headers: { "Content-Type": "multipart/form-data" }
             });
 

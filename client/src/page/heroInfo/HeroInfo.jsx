@@ -12,7 +12,7 @@ const HeroInfo = () => {
     useEffect(() => {
         const fetchHero = async () => {
             try {
-                const res = await axios.get(`http://localhost:5007/api/heroes/${id}`);
+                const res = await axios.get(`https://gametask-production.up.railway.app/api/heroes/${id}`);
                 setHero(res.data);
             } catch (error) {
                 console.log(error);

@@ -56,7 +56,7 @@ const HeroCreate = () => {
                 formData.append("images", img);
             }
 
-            await axios.post("http://localhost:5007/api/heroes", formData, {
+            await axios.post("https://gametask-production.up.railway.app/api/heroes", formData, {
                 headers: { "Content-Type": "multipart/form-data" },
             });
 

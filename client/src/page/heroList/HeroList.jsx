@@ -13,7 +13,7 @@ const HeroList = () => {
     async function getHero() {
         try {
             const response = await axios.get(`https://gametask-production.up.railway.app/api/heroes?page=${page}&limit=5`)
-            console.log("AXIOS RESPONSE:", response)
+
             setData(response.data);
         } catch (error) {
             console.log('error load hero', error.response || error.message)
