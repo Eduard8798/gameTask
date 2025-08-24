@@ -18,7 +18,7 @@ app.use('/api',router)
 async function startApp () {
     try {
         await mongoose.connect(DB_URL)
-        app.listen(PORT,() => console.log('http://localhost:'+ PORT))
+        app.listen(PORT,() => console.log(`Server running on port ${PORT}`))
     }
     catch (error){
         console.log('error App',error)
