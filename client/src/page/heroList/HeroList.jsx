@@ -12,16 +12,17 @@ const HeroList = () => {
 
     async function getHero() {
         try {
-            const response = await axios.get(`https://gametask-production.up.railway.app/api/heroes?page=1&limit=5`)
+            const response = await axios.get(`https://gametask-production.up.railway.app/api/heroes?page=${page}&limit=5`)
+            console.log("AXIOS RESPONSE:", response)
             setData(response.data);
         } catch (error) {
-            console.log('error load hero', error)
+            console.log('error load hero', error.response || error.message)
         }
     }
 
     async function deleteHero(id) {
         try {
-            const res = await axios.delete(`http://localhost:5007/api/heroes/${id}`, {
+            const res = await axios.delete(`https://gametask-production.up.railway.app/api/heroes/${id}`, {
                 method: 'delete'
             })
         } catch (e) {
