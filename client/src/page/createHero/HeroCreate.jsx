@@ -111,7 +111,7 @@ const HeroCreate = () => {
                 </div>
 
                 <button type="submit" className={styles.submitButton}
-                        onClick={() => navigate("/")}
+
                 >Create Hero</button>
                 <button
                     className={styles.backButton}
